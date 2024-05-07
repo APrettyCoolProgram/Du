@@ -1,0 +1,12 @@
+C:\IT\GitHub\APCP\Du\src\bin\Debug\net8.0\Du.deps.json
+C:\IT\GitHub\APCP\Du\src\bin\Debug\net8.0\Du.dll
+C:\IT\GitHub\APCP\Du\src\bin\Debug\net8.0\Du.pdb
+C:\IT\GitHub\APCP\Du\src\obj\Debug\net8.0\Du.GeneratedMSBuildEditorConfig.editorconfig
+C:\IT\GitHub\APCP\Du\src\obj\Debug\net8.0\Du.AssemblyInfoInputs.cache
+C:\IT\GitHub\APCP\Du\src\obj\Debug\net8.0\Du.AssemblyInfo.cs
+C:\IT\GitHub\APCP\Du\src\obj\Debug\net8.0\Du.csproj.CoreCompileInputs.cache
+C:\IT\GitHub\APCP\Du\src\obj\Debug\net8.0\Du.sourcelink.json
+C:\IT\GitHub\APCP\Du\src\obj\Debug\net8.0\Du.dll
+C:\IT\GitHub\APCP\Du\src\obj\Debug\net8.0\refint\Du.dll
+C:\IT\GitHub\APCP\Du\src\obj\Debug\net8.0\Du.pdb
+C:\IT\GitHub\APCP\Du\src\obj\Debug\net8.0\ref\Du.dll

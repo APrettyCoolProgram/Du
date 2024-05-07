@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chris.Banwarth\\Downloads\\Du\\Du.csproj",
+      "projectUniqueName": "C:\\IT\\GitHub\\APCP\\Du\\src\\Du.csproj",
       "projectName": "Du",
-      "projectPath": "C:\\Users\\Chris.Banwarth\\Downloads\\Du\\Du.csproj",
+      "projectPath": "C:\\IT\\GitHub\\APCP\\Du\\src\\Du.csproj",
       "packagesPath": "C:\\Users\\Chris.Banwarth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chris.Banwarth\\Downloads\\Du\\obj\\",
+      "outputPath": "C:\\IT\\GitHub\\APCP\\Du\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Users\\Chris.Banwarth\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
