@@ -2,7 +2,7 @@
 {
     public class Verify
     {
-        public static void Required(List<string> directories)
+        public static void ListOf(List<string> directories)
         {
             foreach (var directory in directories)
             {
