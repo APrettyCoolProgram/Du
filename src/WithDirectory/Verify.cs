@@ -1,6 +1,8 @@
-﻿namespace Du.WithDirectory
+﻿// 240509.1117
+
+namespace Du.WithDirectory
 {
-    public class Verify
+    public static class Verify
     {
         public static void ListOf(List<string> directories)
         {

@@ -1,6 +1,8 @@
-﻿namespace Du.WithFile
+﻿// 240509.1117
+
+namespace Du.WithFile
 {
-    public class Create
+    public static class Create
     {
         public static void IfNonexistant(string path)
         {

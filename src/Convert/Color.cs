@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// 240509.1117
 
 namespace Du.Convert
 {
-    public class Color
+    public static class Color
     {
         public static ConsoleColor ToConsoleColor(string color)
         {

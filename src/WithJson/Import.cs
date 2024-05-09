@@ -1,8 +1,10 @@
-﻿using System.Text.Json;
+﻿// 240509.1117
+
+using System.Text.Json;
 
 namespace Du.WithJson
 {
-    public class Import
+    public static class Import
     {
         public static JsonObject FromFile<JsonObject>(string filePath)
         {

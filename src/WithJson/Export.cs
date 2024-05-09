@@ -1,8 +1,10 @@
-﻿using System.Text.Json;
+﻿// 240509.1117
+
+using System.Text.Json;
 
 namespace Du.WithJson
 {
-    public class Export
+    public static class Export
     {
         /// <summary>Export JSON data to an external file.</summary>
         /// <typeparam name="JsonObject"></typeparam>
@@ -28,19 +30,3 @@ namespace Du.WithJson
         }
     }
 }
-
-
-///////// <summary>Save the Woolpack configuration.</summary>
-//////public static void CreateNew()
-//////{
-//////    JsonSerializerOptions jsonFormat = new JsonSerializerOptions
-//////    {
-//////        WriteIndented = true
-//////    };
-
-//////    var ckConfig = BuildDefault();
-
-//////    string configContent = JsonSerializer.Serialize(ckConfig, jsonFormat);
-
-//////    File.WriteAllText(@"./cooke.config", configContent);
-//////}

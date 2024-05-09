@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// 240509.1117
 
 namespace Du.WithDirectory
 {
-    public class Delete
+    public static class Delete
     {
         public static void ListOf(List<string> directories)
         {

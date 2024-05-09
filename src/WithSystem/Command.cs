@@ -1,8 +1,10 @@
-﻿using System.Diagnostics;
+﻿// 240509.1117
+
+using System.Diagnostics;
 
 namespace Du.WithSystem
 {
-    public class Command
+    public static class Command
     {
         public static void Execute(string cmd, string arg, bool terminate = true)
         {

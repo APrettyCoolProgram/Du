@@ -1,12 +1,12 @@
-﻿namespace Du.WithFile
+﻿// 240509.1117
+
+namespace Du.WithFile
 {
-    public class Verify
+    public static class Verify
     {
         public static bool Exists(string path)
         {
             return File.Exists(path);
         }
-
-
     }
 }
