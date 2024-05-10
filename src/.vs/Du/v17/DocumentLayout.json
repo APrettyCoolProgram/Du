@@ -1,10 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Chris.Banwarth\\Downloads\\Du\\",
+  "WorkspaceRootPath": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\chris.banwarth\\downloads\\du\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\readme.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:readme.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\convert\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:convert\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\withcommandline\\displaytext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:withcommandline\\displaytext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\withdirectory\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:withdirectory\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\withdirectory\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:withdirectory\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\withfile\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:withfile\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\withfile\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:withfile\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\withframework\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:withframework\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\withjson\\export.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:withjson\\export.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\withjson\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:withjson\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\du\\src\\withsystem\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A77B6B-DEDF-48AB-8171-EEF27BB4F820}|Du.csproj|solutionrelative:withsystem\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,74 +54,150 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cfff3162-9c8d-4244-b0a7-e3b39a968b24}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{48f3bb34-bb3f-34de-a1c6-85b161a6542a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\Downloads\\Du\\Class1.cs",
-              "RelativeDocumentMoniker": "Class1.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\Downloads\\Du\\Class1.cs",
-              "RelativeToolTip": "Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T15:47:12.701Z",
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-05-10T20:24:42.057Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 345,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Color.cs",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\Convert\\Color.cs",
+              "RelativeDocumentMoniker": "Convert\\Color.cs",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\Convert\\Color.cs",
+              "RelativeToolTip": "Convert\\Color.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:24:05.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DisplayText.cs",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithCommandLine\\DisplayText.cs",
+              "RelativeDocumentMoniker": "WithCommandLine\\DisplayText.cs",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithCommandLine\\DisplayText.cs",
+              "RelativeToolTip": "WithCommandLine\\DisplayText.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:24:01.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Delete.cs",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithDirectory\\Delete.cs",
+              "RelativeDocumentMoniker": "WithDirectory\\Delete.cs",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithDirectory\\Delete.cs",
+              "RelativeToolTip": "WithDirectory\\Delete.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:23:59.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Verify.cs",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithDirectory\\Verify.cs",
+              "RelativeDocumentMoniker": "WithDirectory\\Verify.cs",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithDirectory\\Verify.cs",
+              "RelativeToolTip": "WithDirectory\\Verify.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:23:57.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cs",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithFile\\Create.cs",
+              "RelativeDocumentMoniker": "WithFile\\Create.cs",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithFile\\Create.cs",
+              "RelativeToolTip": "WithFile\\Create.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:23:53.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Verify.cs",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithFile\\Verify.cs",
+              "RelativeDocumentMoniker": "WithFile\\Verify.cs",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithFile\\Verify.cs",
+              "RelativeToolTip": "WithFile\\Verify.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:23:51.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Verify.cs",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithFramework\\Verify.cs",
+              "RelativeDocumentMoniker": "WithFramework\\Verify.cs",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithFramework\\Verify.cs",
+              "RelativeToolTip": "WithFramework\\Verify.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:23:47.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Export.cs",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithJson\\Export.cs",
+              "RelativeDocumentMoniker": "WithJson\\Export.cs",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithJson\\Export.cs",
+              "RelativeToolTip": "WithJson\\Export.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:23:27.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Import.cs",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithJson\\Import.cs",
+              "RelativeDocumentMoniker": "WithJson\\Import.cs",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithJson\\Import.cs",
+              "RelativeToolTip": "WithJson\\Import.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:23:13.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Command.cs",
+              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithSystem\\Command.cs",
+              "RelativeDocumentMoniker": "WithSystem\\Command.cs",
+              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Du\\src\\WithSystem\\Command.cs",
+              "RelativeToolTip": "WithSystem\\Command.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:22:52.791Z",
+              "EditorCaption": ""
             }
           ]
         }
