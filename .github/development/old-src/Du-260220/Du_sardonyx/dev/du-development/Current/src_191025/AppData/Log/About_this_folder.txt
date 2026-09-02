@@ -1,0 +1,5 @@
+﻿About the /AppData/Log/ folder
+=================================
+This folder should logfiles for your project.
+
+By default, this folder is always copied to your project's output directory.

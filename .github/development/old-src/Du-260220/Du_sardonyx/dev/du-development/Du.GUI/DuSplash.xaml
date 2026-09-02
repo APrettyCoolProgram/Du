@@ -1,0 +1,143 @@
+﻿<Window
+    x:Class="Thaumaturge.Du.DuSplash"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Thaumaturge.Du"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    x:Name="Splash"
+    Title="Title"
+    Width="600"
+    Height="400"
+    Background="Transparent"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid>
+        <Border
+            x:Name="brdrOuter"
+            Background="White"
+            BorderBrush="Black"
+            BorderThickness="1"
+            CornerRadius="5"
+            SnapsToDevicePixels="True">
+            <Border
+                x:Name="brdrInner"
+                Margin="3,3,3,3"
+                Background="White"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="4"
+                SnapsToDevicePixels="True">
+                <DockPanel
+                    x:Name="dpnlContent"
+                    Width="auto"
+                    Height="auto"
+                    Margin="10,10,10,50"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Background="White"
+                    LastChildFill="True">
+                    <TextBlock
+                        x:Name="tblkContentTitle"
+                        Width="auto"
+                        Height="auto"
+                        Padding="5,5,5,5"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Stretch"
+                        DockPanel.Dock="Top"
+                        FontFamily="Segoe UI Semibold"
+                        FontSize="36"
+                        Text="This is the popup title" />
+                    <Label
+                        x:Name="lblAppVersion"
+                        Width="auto"
+                        Height="25"
+                        Margin="0,5"
+                        HorizontalAlignment="Center"
+                        Content="v0.0.0"
+                        DockPanel.Dock="Top"
+                        FontFamily="Segoe UI Semibold"
+                        FontSize="11" />
+                    <TextBlock
+                        x:Name="tblkContentSubTitle"
+                        Width="auto"
+                        Height="auto"
+                        Padding="5,5,5,5"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Stretch"
+                        DockPanel.Dock="Top"
+                        FontFamily="Segoe UI Semibold"
+                        FontSize="20"
+                        Text="This is the popup sub-title "
+                        TextWrapping="Wrap" />
+                    <TextBlock
+                        x:Name="tblkContentBody"
+                        Width="auto"
+                        Height="133"
+                        Margin="0,5"
+                        Padding="5,5,5,5"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        DockPanel.Dock="Top"
+                        FontSize="16"
+                        Text="This is the popup body."
+                        TextWrapping="Wrap" />
+                    <TextBlock
+                        x:Name="tblkContentStatusUpdate"
+                        Width="auto"
+                        Height="53"
+                        Margin="10,0"
+                        Padding="5,5,5,5"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        DockPanel.Dock="Top"
+                        FontSize="10"
+                        Text="Status updates."
+                        TextWrapping="Wrap" />
+                </DockPanel>
+            </Border>
+        </Border>
+        <DockPanel
+            x:Name="dpnlActionButtons"
+            Width="440"
+            Height="32"
+            Margin="14,210,20,15"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom">
+            <Button
+                x:Name="btnAction01"
+                Width="140"
+                Height="32"
+                Margin="0,0,10,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="White"
+                Click="BtnAction01_Click"
+                Content="Action01"
+                Visibility="Hidden" />
+            <Button
+                x:Name="btnAction02"
+                Width="140"
+                Height="32"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="White"
+                Click="BtnAction02_Click"
+                Content="Action02"
+                Visibility="Hidden" />
+            <Button
+                x:Name="btnAction03"
+                Width="140"
+                Height="32"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="White"
+                Click="BtnAction03_Click"
+                Content="Action03"
+                Visibility="Hidden" />
+        </DockPanel>
+    </Grid>
+</Window>

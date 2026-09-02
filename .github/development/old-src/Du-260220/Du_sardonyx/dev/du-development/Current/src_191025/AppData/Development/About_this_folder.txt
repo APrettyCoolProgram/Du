@@ -1,0 +1,7 @@
+﻿About the /AppData/Development/ folder
+=================================
+This folder should contain development files for your project.
+
+By default, this folder is *not* copied to your project's output directory, and
+is intended to store notes and temporary information useful for the project's
+development.

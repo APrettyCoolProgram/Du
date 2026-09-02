@@ -1,0 +1,5 @@
+﻿About the /AppData/Temp/ folder
+=================================
+This folder should contain non-critical temporary files project.
+
+By default, this folder is always copied to your project's output directory.

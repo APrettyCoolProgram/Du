@@ -1,0 +1,10 @@
+﻿About the /AppData/Config/ folder
+=================================
+This folder should contain configuration files for your project.
+
+Examples:
+
+	App.config
+	AppConfig.json
+
+By default, this folder is always copied to your project's output directory.

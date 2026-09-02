@@ -1,0 +1,51 @@
+﻿
+MERGE TWO LISTS
+firstList.AddRange(secondList);
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Cnvert a file, line by line, into a list, then clean it.
+        /// </summary>
+        /// <param name="filePath">The path of the file to convert.</param>
+        /// <param name="removeBlanks">Flag to clean blank lines [true/false].</param>
+        /// <param name="commentCharacter">The comment character (i.e '#', or "null" if not cleaning comments).</param>
+        /// <returns>The file contents as a list.</returns>
+        public static List<string> ToList(StreamReader filePath, bool removeBlanks, char? commentCharacter)
+        {
+            /*  This works with external files and embedded resources, provided you pass the file as as a StringReader
+             *  object. If the file is external, use the following code when calling this method:
+             *
+             *      var filePath = new System.IO.StreamReader("path/to/file");
+             *      Du.File.ToStringDictionary(filePath);
+             *
+             *  If the file is embedded, use the following code when calling this method:
+             *
+             *      var assemblyName = Assembly.GetExecutingAssembly();
+             *      var filePath     = new System.IO.StreamReader(assemblyName.GetManifestResourceStream("path/to/file"));
+             *      Du.File.ToStringDictionary(filePath);
+             */
+            var isBlank      = false;
+            var isComment    = false;
+            var originalList = DuFile.ToList(filePath);
+            var workList     = new List<string>();
+
+            foreach (var item in originalList)
+            {
+                isBlank = DuString.CheckIsBlank(item);
+                isComment = DuString.CheckIsComment(item, commentCharacter);
+
+                if (removeBlanks && isBlank || commentCharacter != null && isComment || commentCharacter == null)
+                {
+                    workList.Add(item);
+                }
+            }
+
+            return workList;
+        }

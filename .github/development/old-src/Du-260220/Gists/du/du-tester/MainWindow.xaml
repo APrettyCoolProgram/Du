@@ -1,0 +1,126 @@
+﻿<Window
+    x:Class="DuTester.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DuTester"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+
+        <!--  TAB CONTROL  -->
+
+        <TabControl x:Name="tctlDuTester" Margin="10,10,10,10">
+
+            <!--  TAB: WithString  -->
+
+            <TabItem x:Name="tabWithString" Header="WithString">
+                <Grid Background="#FFFFFF">
+
+                    <!--  String entry field  -->
+                    <Label
+                        x:Name="lblStringEntryHeader"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Content="Type a string here" />
+                    <TextBox
+                        x:Name="tboxStringEntry"
+                        Width="766"
+                        Height="23"
+                        Margin="0,26,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        FontSize="14"
+                        Text="The test string goes here"
+                        TextWrapping="Wrap" />
+
+                    <!--  String entry field  -->
+                    <Label
+                        x:Name="lblTestStringHeader"
+                        Margin="19,50,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Content="Test string:" />
+                    <TextBox
+                        x:Name="tboxTestStringEntry"
+                        Width="45"
+                        Margin="86,54,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        HorizontalContentAlignment="Center"
+                        Text="12345"
+                        TextChanged="tboxTestStringEntry_TextChanged"
+                        TextWrapping="Wrap" />
+
+
+                    <!--  BUTTONS  -->
+
+                    <!--  BTN: ConvertToLowercase  -->
+                    <Button
+                        x:Name="btnConvertToLowercase"
+                        Width="150"
+                        Margin="27,152,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Click="btnConvertToLowercase_Click"
+                        Content="Convert to lowercase" />
+
+                    <!--  BTN: ConvertToUppercase  -->
+                    <Button
+                        x:Name="btnConvertToUppercase"
+                        Width="150"
+                        Margin="27,177,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Click="btnConvertToUppercase_Click"
+                        Content="Convert to uppercase" />
+
+                    <!--  BTN: PrependString  -->
+                    <Button
+                        x:Name="btnPrependString"
+                        Width="150"
+                        Margin="27,202,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Click="btnPrependString_Click"
+                        Content="Prepend string" />
+
+                    <!--  BTN: AppendTrailingCharacter  -->
+                    <Button
+                        x:Name="btnAppendString"
+                        Width="150"
+                        Margin="27,227,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Click="btnAppendString_Click"
+                        Content="Append string" />
+
+
+
+                    <!--  String result field  -->
+                    <Label
+                        x:Name="lblStringResultHeader"
+                        Margin="14,319,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Content="Result"
+                        RenderTransformOrigin="0.768,-2.357" />
+                    <Label
+                        x:Name="lblStringResult"
+                        Width="766"
+                        Height="28"
+                        Margin="0,350,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        BorderBrush="Black"
+                        BorderThickness="1"
+                        Content="Label" />
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

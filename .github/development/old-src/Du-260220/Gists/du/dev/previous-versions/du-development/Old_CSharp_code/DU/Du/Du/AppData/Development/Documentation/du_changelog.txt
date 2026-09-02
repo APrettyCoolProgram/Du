@@ -1,0 +1,53 @@
+﻿DU.cs
+CHANGELOG
+=========
+
+
+VERSION     BUILD
+=======     =====
+
+0.17.0      180319  [NEW]   DuList.IsEmpty()
+                    [NEW]   DuString.GetSubstring()
+                    [NEW]   DuString.NthCharacterIs()
+
+0.16.0      180228  [NEW]   DuArray
+                    [NEW]   DuArray.ToString
+
+0.15.0      180227  [NEW]   DuDirectory.CheckExist()
+                    [NEW]   DuDirectory.GetFileNames()
+                    [NEW]   DuDirectory.GetSpecial()
+                    [NEW]   DuDirectory.New()
+
+0.12.0      180227  [NFO]   Various (undocumented!) changes
+                    [NFO]   Code/comment cleanup.
+
+0.5.0       171202  [NEW]	DuButton.cs
+                    [NEW]	DuButton.Template()
+                    [NEW]	DuButton.BuildArray()
+                    [NEW]	DuDirectory.cs
+                    [NEW]	DuDirectory.GetSubdirectoryPaths()
+                    [NEW]	DuPanel.cs
+                    [NEW]	DuPanel.Template()
+                    [NEW]	DuPanel.BuildArray()
+                    [NEW]	DuString.RemoveLeadingContent()
+                    [NEW]	DuJson.cs
+
+0.4.1       171130  [NEW]	DuString.ToFile()
+                    [NEW]	DuFile.ToString()
+                    [NEW]	DuFile.FromString
+
+0.4.0       171130  [NEW]	DuLabel.cs
+                    [NEW]	DuLabel.CreateTemplate
+                    [NEW]	DuLabel.BuildArray
+                    [UPD]	DuCheckBox.cs
+
+0.3.0       171130  [NFO]	Code and comment cleanup for updated Nuget package release
+                    [NEW]	DuString.RemoveBookendWhitespace
+                    [NEW]	DuString.RemoveLeadingWhitespace
+                    [NEW]	DuString.RemoveTrailingWhitespace
+
+0.2.0       171017  [NFO]	Inital Nuget package release
+                    [NEW]	DuInputBox.cs
+                    [NEW]	DuMail.cs
+
+0.1.0       170929  [NFO]   Initial release

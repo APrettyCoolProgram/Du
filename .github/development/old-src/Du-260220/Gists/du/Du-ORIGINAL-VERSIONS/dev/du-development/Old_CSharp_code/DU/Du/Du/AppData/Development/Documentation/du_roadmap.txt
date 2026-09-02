@@ -1,0 +1,26 @@
+﻿DU.cs
+ROADMAP
+September 29, 2017
+=========
+
+[ ] LINQ EVERYWHERE!
+
+
++ Allow cusom colors on InputBox.cs
+
+
+
+
+DuCheckBox
+	BuildArray: Enforce a minimum/maximum number of rows/columns.
+
+
+
+DuFile
+	ToDictionary: Probably still need to remove comments, but do this elswehere and look for keys that start with the
+				  comment character.
+	ToList: Probably still need to remove comments, but do this elswehere and look for keys that start with the
+		    comment character.
+
+DuString
+	            return toCheck == "" || toCheck == " " || string.IsNullOrEmpty(toCheck); < all needed?

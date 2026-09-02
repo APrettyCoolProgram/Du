@@ -1,0 +1,6 @@
+﻿About the /AppData/Document/ folder
+=================================
+This folder should contain important documentation for your project.
+
+By default, all files in this folder are copied to your project's output
+directory.

@@ -1,0 +1,51 @@
+﻿DU.cs
+CHANGELOG
+=========
+
+
+v0.5.0-alpha+171202
+-------------------
+[NEW]	DuButton.cs
+[NEW]	DuButton.Template()
+[NEW]	DuButton.BuildArray()
+[NEW]	DuDirectory.cs
+[NEW]	DuDirectory.GetSubdirectoryPaths()
+[NEW]	DuString.RemoveLeadingContent()
+[NEW]	DuJson.cs: Does things with .JSON-formatted data. <- not working yet.
+
+
+v0.4.1-alpha+b171130
+--------------------
+[NEW]	DuString.ToFile(): Converts a string to a file.
+[NEW]	DuFile.ToString(): Converts a file to a string.
+[NEW]	DuFile.FromString: This should be in DuString.
+
+v0.4.0-alpha+b171130
+--------------------
+[NEW]	DuLabel.cs
+[NEW]	DuLabel.CreateTemplate
+[NEW]	DuLabel.BuildArray
+[COD]	Minor updates to DuCheckBox code and comments
+
+
+v0.3.0-alpha+b171130
+--------------------
+[NFO]	Code and comment cleanup for updated Nuget package release
+
+
+
+[NEW]	DuString.RemoveBookendWhitespace
+[NEW]	DuString.RemoveLeadingWhitespace
+[NEW]	DuString.RemoveTrailingWhitespace
+
+
+v0.2.0-alpha+b171017
+--------------------
+[NFO]	Inital Nuget package release
+[NEW]	DuInputBox.cs: Creates a popup that accepts an input.
+[NEW]	DuMail.cs: Sends an email.
+
+
+v0.1.0-alpha+b170929
+--------------------
+[NFO]	Initial (re)release

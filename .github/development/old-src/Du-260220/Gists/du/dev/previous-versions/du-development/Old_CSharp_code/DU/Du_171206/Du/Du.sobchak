@@ -1,0 +1,15 @@
+{
+  "Name": "Du",
+  "Included": false,
+  "SyncManifestFiles": false,
+  "CreatePlaceholders": true,
+  "SyncScratchFolders": false,
+  "SyncBinFolder": false,
+  "ArchiveCodeSource": false,
+  "CodeSourceArchiveCompress": true,
+  "CodeSourceArchiveRelative": true,
+  "ArchiveCodeDestination": true,
+  "CodeDestinationArchiveCompress": true,
+  "CodeDestinationArchiveRelative": true,
+  "RemoveDevelopmentComments": true
+}

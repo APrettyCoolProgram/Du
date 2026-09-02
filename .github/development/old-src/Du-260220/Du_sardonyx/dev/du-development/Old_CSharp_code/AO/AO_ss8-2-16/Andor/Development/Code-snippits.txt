@@ -1,0 +1,635 @@
+﻿# ----------------------------------------------------------------------------------------------------------------------
+# AO Scratchpad
+# ----------------------------------------------------------------------------------------------------------------------
+
+============================================
+DoMARKDOWN.CS
+============================================
+
+/*
+
+                            // Copy the file into a string, adding a newline after each line - MAKE MORE EFFICIENT / MOVE TO WITHMARKDOWN.CS
+                        case "_convertMarkup":
+
+                            // Assume no break
+                            breakType = "\n<br>\n";
+
+                            // Encapsulate anything inside of "**" with <strong></strong>, and add a <br> for formatting.
+                            if (lineToRead.Contains("**"))
+                            {
+                                lineToRead = Regex.Replace(lineToRead, @"\*\*(.*)\*\*", "<strong>" + lineToRead + "</strong>");
+                                lineToRead = WithStrings.ReplaceStringWithString("*", "", lineToRead);
+                                breakType = "\n<br>\n";
+                            }
+
+                            // Encapsulate anything inside of "**" with <strong></strong>, and add a <br> for formatting.
+                            if (lineToRead.Contains("*"))
+                            {
+                                lineToRead = Regex.Replace(lineToRead, @"\*(.*)\*", "<em>" + lineToRead + "</em>");
+                                lineToRead = WithStrings.ReplaceStringWithString("*", "", lineToRead); // COMBINE, MAKE MORE EFFICIENT
+                                breakType = "\n<br>\n";
+                            }
+
+                            // If the line has header tags. Don't add <br> here, the space is too great.
+                            if (lineToRead.StartsWith("#"))
+                            {
+                                // Count the number of #'s at the beginning of the line, then make a header tag out of that number.
+                                int numberOfPoundChars = lineToRead.TakeWhile(poundChar => poundChar == '#').Count(); // BEST WAY?
+                                lineToRead = "<h" + numberOfPoundChars + ">" + lineToRead + "</h" + numberOfPoundChars + ">";  // MOVE TO METHOD THAT DOES THIS BECAUSE WE DO IT OTHER PLACES
+                                // Remove the #'s from the line
+                                lineToRead = WithStrings.ReplaceStringWithString("#", "", lineToRead);
+                                breakType = "\n";
+                            }
+
+                            // End blockquotes
+                            if (lineToRead.StartsWith("<<<"))
+                            {
+                                lineToRead = WebUtility.HtmlDecode("</span>");
+                                breakType = "\n<br>\n";
+                            }
+
+                            // Start blockquotes
+                            if (lineToRead.StartsWith(">"))
+                            {
+                                // Count the number of >'s at the beginning of the line, then make a header tag out of that number.
+                                int numOfRtAngleChars = lineToRead.TakeWhile(RtAngleChar => RtAngleChar == '>').Count(); // BEST WAY?
+
+                                // Remove the >'s from the line
+                                lineToRead = WithStrings.ReplaceStringWithString(">", "", lineToRead);
+                                lineToRead = WebUtility.HtmlDecode("<span class=\"blockquote0" + numOfRtAngleChars + "\">");
+                                breakType = "\n";
+                            }
+
+                            // If we need to put in a <hr>.
+                            if (lineToRead.StartsWith("___"))
+                            {
+                                // Put a horizontal line in.
+                                lineToRead = "<hr>";
+                                breakType = "\n<br>\n";
+                            }
+    */
+
+
+
+/*
+        // Reads a file line by line, starting and stopping at different parts of the file - REWRITE AND MAYBE COMBINE INTO ABOVE?
+        // Arguments:
+        //   fileToOpen: the file to work with
+        //   doSpecial: do something with the text in the file (_no OR _addNewLine OR _convertMarkdown OR _removeEmptyLines)
+        //   startLine: line to start at (_first OR specific line)
+        //   startAfterLine: start reading after this line (_unused OR specific line)
+        //   stopLine: stop reading at this line (_unused OR specific line)
+        public static string ReadFileLinesToString (string fileToOpen, string doSpecial, string startLine, string startAfterLine, string stopLine)
+        {
+            // Setup a bunch of stuff.
+            int lineCount = 0;  // Better names, and do we need all of these?
+            bool startReading = false;
+            string breakType;
+            string lineToRead;
+            string workingString = string.Empty;
+            System.IO.StreamReader fileToRead = new System.IO.StreamReader(fileToOpen);
+
+            // Read the file and do stuff!
+            while ((lineToRead = fileToRead.ReadLine()) != null)
+            {
+                // If the stop line has been reached, exit
+                if (String.Equals(lineToRead, stopLine))
+                {
+                    break;
+                }
+
+                // Start reading at the start of the file OR at the start line
+                if ((String.Equals(startLine, "_first")) || (String.Equals(startLine, lineToRead)))
+                {
+                    startReading = true;
+                }
+
+                // If we are reading the file
+                if (startReading)
+                {
+                    // Do some specific things
+                    switch (doSpecial)
+                    {
+                        // Copy the file into a string
+                        case "_no":
+                            workingString = workingString + lineToRead;
+                            lineCount++;
+                            break;
+
+                        // Copy the file into a string, adding a newline after each line - COMBINE WITH BELOW?
+                        case "_add\n":
+                            workingString = workingString + lineToRead + "\n";
+                            lineCount++;
+                            break;
+
+                        // Copy the file into a string, adding a carriage return and newline after each line - COMBINE WITH BELOW?
+                        case "_add\r\n":
+                            workingString = workingString + lineToRead + "\r\n";
+                            lineCount++;
+                            break;
+
+                        // Copy the file into a string, adding a newline after each line - COMBINE WITH BELOW? OR REMOVE SINCE IT IS ABOVE?
+                        case "_addNewLine":
+                            workingString = workingString + lineToRead + "\n";
+                            lineCount++;
+                            break;
+
+                            workingString = workingString + lineToRead + breakType;
+
+                            lineCount++;
+                            break;
+
+                        // Copy the file into a string, removing any empty lines
+                        case "removeEmptyLines":
+                            if (lineToRead != string.Empty)
+                            {
+                                workingString = workingString + lineToRead + "\n";
+                                lineCount++;
+                            }
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+
+                // Start recording after the line we just read
+                if (String.Equals(lineToRead, startAfterLine))
+                {
+                    startReading = true;
+                }
+            }
+
+            // If marking down, wrap the final string in special CSS code // REPLACE WITH CSS
+            if (doSpecial == "_convertMarkup")
+            {
+                //string fontCodes = "<font face=\"" + GVar.confVar["markdownFontFace"] + "\" size=\"" + GVar.confVar["markdownFontSize"] + "\">\n";
+                string htmlStart = WithFiles.ReadFileLinesToString(GVar.confVar["pagebuilderStart"], "_add\n", "_first", "_unused", "_unused");
+                string htmlEnd = WithFiles.ReadFileLinesToString(GVar.confVar["pagebuilderEnd"], "_add\n", "_first", "_unused", "_unused");
+                workingString = htmlStart + workingString + htmlEnd;
+            }
+
+            // Close the file, and return the string
+            fileToRead.Close();
+            return workingString;
+        }
+
+    */
+
+
+============================================
+DoDICTIONARY.CS
+============================================
+
+    // WithDictionaries [140804]
+// Do different things with dictionaries.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Roundhouse
+{
+    class WithDictionaries
+    {
+        // Put the values of a multidimentional array into a dictionary, mostly used to create easy to read key=value pairs
+        public static Dictionary<string, string> MultiArrayToDictionary(string[,] arrayToUse)
+        {
+            // New dictionary to do the work on
+            Dictionary<string, string> workingDictionary = new Dictionary<string, string>();
+
+            // Iterate through the passed array, and add the values to a dictionary.
+            for (int keyCount = 0; keyCount < arrayToUse.GetLength(0); keyCount++)
+            {
+                workingDictionary.Add(arrayToUse[keyCount, 0], arrayToUse[keyCount, 1]);
+            }
+            return workingDictionary;
+        }
+
+        // Put values into a dictionary, overwriting if they exist, and adding if they don't. - COMBINE THIS WITH ABOVE?
+        public static Dictionary<string, string> MultiArrayToOverwriteDictionary(string[,] arrayToUse, Dictionary<string, string> dictionaryToUse)
+        {
+            // Iterate through the passed array, and add or replace the values to a dictionary.
+            for (int keyCount = 0; keyCount < arrayToUse.GetLength(0); keyCount++)
+            {
+                //If the current key exists, update the value.
+                if (dictionaryToUse.ContainsKey(arrayToUse[keyCount, 0]))
+                {
+                    dictionaryToUse[arrayToUse[keyCount, 0]] = arrayToUse[keyCount, 1];
+                }
+                // If the current key does not exist, add the key=value pair to the dictionary.
+                else
+                {
+                    dictionaryToUse.Add(arrayToUse[keyCount, 0], arrayToUse[keyCount, 1]);
+                }
+            }
+            return dictionaryToUse;
+        }
+
+        // Get variables from configuration files, and put them in a dictionary. If multiple configuration files exist,
+        // variables can be overwritten.
+        public static Dictionary<string, string> ConfFileToDic(string splitAt, string doSpecial, string confType, string confName)
+        {
+            // Create some working variables for the passed configuration file, read the numnber of lines to get the number of
+            // elements for an array for the values, create the array, then read the config file into the array.
+            Dictionary<string, string> workingDic = new Dictionary<string, string>();
+            int numElements = WithFiles.CountFileLines(confName, "_config");
+            string[,] workingConfVars = new string[numElements, 2];
+            workingConfVars = WithFiles.ReadFileLinesToMultiArray(confName, splitAt, doSpecial, numElements, 2);
+
+            // Put the variables into a dictionary
+            switch (confType)
+            {
+                // Put the base config values into the global dictionary.
+                case "_base":
+                    workingDic = WithDictionaries.MultiArrayToDictionary(workingConfVars);
+                    break;
+
+                // Put the override config values into the global dictionary. In some cases these values will
+                // already exist in the dictionary from the default configuration file, in which case the default
+                // value will be overwritten. Any values that only exist in the override configuration are added
+                // to the dictionary.
+                case "_override":
+                    workingDic = WithDictionaries.MultiArrayToOverwriteDictionary(workingConfVars, GVar.confVar);
+                    break;
+
+                default:
+                    break;
+            }
+            return workingDic;
+        }
+    }
+}
+
+    */
+
+
+
+
+============================================
+EMAIL
+============================================
+
+
+/*  Send                                160214 */
+
+using System.Net.Mail;
+
+namespace AO
+{
+    internal class DoEmail
+    {
+        /// <summary>Send an email</summary>
+        public static void Send()
+        {
+            MailMessage mailMessageToSend = new MailMessage();
+            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+            mailMessageToSend.From = new MailAddress("from");
+            mailMessageToSend.To.Add("service-desk@abcd.com");
+            mailMessageToSend.Subject = "Test Mail";
+            mailMessageToSend.Body = "THIS IS A TEST!";
+
+            SmtpServer.Port = 587;
+            SmtpServer.Credentials = new System.Net.NetworkCredential("username", "password");
+            SmtpServer.EnableSsl = true;
+
+            SmtpServer.Send(mailMessageToSend);
+        }
+    }
+}
+
+
+============================================
+FTP
+============================================
+
+
+using System;
+using System.IO;
+using System.Net;
+using System.Text;
+
+namespace AO
+{
+    public class DoFTP
+    {
+        public static void test()
+        {
+            // Get the object used to communicate with the server.
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://aprettycoolprogram.com/public_shtml");
+            request.Method = WebRequestMethods.Ftp.UploadFile;
+
+            // This example assumes the FTP site uses anonymous logon.
+            request.Credentials = new NetworkCredential("test@aprettycoolprogram.com", "brianthomas");
+            // Copy the contents of the file to the request stream.
+
+            StreamReader sourceStream = new StreamReader(@"z:\test.txt");
+            byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+            sourceStream.Close();
+            request.ContentLength = fileContents.Length;
+            Stream requestStream = request.GetRequestStream();
+            requestStream.Write(fileContents, 0, fileContents.Length);
+            requestStream.Close();
+            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+            Console.WriteLine("Upload File Complete, status {0}", response.StatusDescription);
+            response.Close();
+        }
+    }
+}
+
+
+============================================
+GVAR
+============================================
+
+using System;
+using System.Collections.Generic;
+
+namespace AO
+{
+    public class GVar
+    {
+        // Application globals
+        private static string _assemblyName; public static string AssemblyName { get { return _assemblyName; } set { _assemblyName = value; } }
+
+        // Manifest globals
+        private static bool _developmentMode; public static bool DevelopmentMode { get { return _developmentMode; } set { _developmentMode = value; } }
+        private static string _helpdeskMode; public static string HelpdeskMode { get { return _helpdeskMode; } set { _helpdeskMode = value; } }
+        private static string _avatoolVersion; public static string AvatoolVersion { get { return _avatoolVersion; } set { _avatoolVersion = value; } }
+        private static string _avatoolBuild; public static string AvatoolBuild { get { return _avatoolBuild; } set { _avatoolBuild = value; } }
+        private static string _defaultEnvironmentName; public static string DefaultEnvironmentName { get { return _defaultEnvironmentName; } set { _defaultEnvironmentName = value; } }
+        private static string _defaultEnvironmentIP; public static string DefaultEnvironmentIP { get { return _defaultEnvironmentIP; } set { _defaultEnvironmentIP = value; } }
+        private static string _sessionUsername; public static string SessionUsername { get { return _sessionUsername; } set { _sessionUsername = value; } }
+        private static string _sessionPassword; public static string SessionPassword { get { return _sessionPassword; } set { _sessionPassword = value; } }
+
+        /// <summary>Load settings.</summary>
+        /// <param name="settings">The settings.</param>
+        public static void Load(Dictionary<string, string> settings, string varType)
+        {
+            switch (varType)
+            {
+                case "setting":
+                    GVar.DevelopmentMode = Convert.ToBoolean(settings["developmentMode"]);
+                    GVar.HelpdeskMode = settings["helpdeskMode"];
+                    GVar.AvatoolVersion = settings["avatoolVersion"];
+                    GVar.AvatoolBuild = settings["avatoolBuild"];
+                    GVar.DefaultEnvironmentName = settings["defaultEnvironmentName"];
+                    GVar.DefaultEnvironmentIP = settings["defaultEnvironmentIP"];
+                    break;
+
+                case "credential":
+                    //GVar.SessionUsername = credentials["sessionUsername"];
+                    //GVar.SessionPassword = credentials["sessionPassword"];
+                    break;
+
+                case "application":
+                    GVar.AssemblyName = "AVATOOL";
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
+}
+
+
+
+============================================
+AO
+============================================
+
+using System.Collections.Generic;
+
+namespace AO
+{
+    public class DoAPCP
+    {
+        /// <summary>Embedded</summary>
+        /// <param name="assemblyName"></param>
+        /// <param name="manifestType"></param>
+        /// <returns></returns>
+        public static List<string> ReadSettingManifest(string assemblyName)
+        {
+            return DoList.Remove(DoFile.ToList("APCP.Manifest.Setting", assemblyName));
+        }
+
+        public static List<string> ReadCredentialManifest(string assemblyName)
+        {
+            return DoList.Remove(DoFile.ToList("APCP.Manifest.Credential", assemblyName));
+        }
+
+    }
+}
+
+============================================
+FILE STUFF
+============================================
+
+/*
+
+namespace AO
+{
+    public class DoCredential
+    {
+        /*
+        /// <summary>Get key/value pairs.</summary>
+        /// <param name="assemblyName">Applications assembly name.</param>
+        /// <param name="listOfCredentialFiles">The list of setting files.</param>
+        /// <returns>A list of all key/value pairs from all setting files.</returns>
+        public static List<string> GetCredentialPairs(string assemblyName, List<string> listOfCredentialFiles)
+        {
+            var currentFileContents = new List<string>(); // Holds key/value pairs of the current setting file
+            var listOfKeyValuePairs = new List<string>(); // Holds the key/value pairs of all setting files
+            var filteredList = new List<string>();        // Returns all setting key/value pairs
+
+            // Read the contents of each credential file, and merge with previous data
+            foreach (var item in listOfCredentialFiles)
+            {
+                if (item.StartsWith("Embedded"))
+                {
+                    currentFileContents = DoEmbedded.ToStringList(assemblyName, item);
+                }
+                else
+                {
+                    currentFileContents = DoFile.ToStringList(item);
+                }
+
+                listOfKeyValuePairs = DoList.MergeStringLists(listOfKeyValuePairs, currentFileContents);
+            }
+
+            // Remove empty and comment lines
+            filteredList = DoList.Filter(listOfKeyValuePairs, true, true, '#');
+            return filteredList;
+        }
+
+        /// <summary>Gets the credentials for the application.</summary>
+        /// <param name="assemblyName">The application assembly name.</param>
+        /// <returns>The credentials to be used.</returns>
+        public static Dictionary<string, string> GetCredentials(string assemblyName)
+        {
+            var listOfCredentialFilenames = new List<string>();                    // Holds list of setting filenames
+            var listOfKeyValuePairs = new List<string>();                          // Holds list of key/value pairs for all settings
+            var keysAndValues = new Dictionary<string, string>();                  // Returns key/value pairs in a dictionary
+
+            // Get list of credential filenames, then a list of the key/value pairs from each file
+            listOfCredentialFilenames = GetCredentialFilenames(assemblyName);
+            listOfKeyValuePairs = GetCredentialPairs(assemblyName, listOfCredentialFilenames);
+
+            var arrayOfKeyValuePairs = new string[listOfKeyValuePairs.Count];      // Holds key/value pairs
+
+            // Put key/value pairs into an array, then into a dictionary //TODO- Too complex, do this with the list above.
+            arrayOfKeyValuePairs = DoList.ToStringArray(listOfKeyValuePairs);
+            keysAndValues = DoArray.ToStringDictionary(arrayOfKeyValuePairs, '=');
+
+            return keysAndValues;
+        }
+    }
+}
+
+namespace AO
+{
+    public class DoEmbedded
+    {
+        /*
+
+        /// <summary>Get the setting filenames from an embedded manifest file.</summary>
+        /// <param name="assemblyName">Assembly name of executable.</param>
+        /// <returns>A list of setting filenames.</returns>
+        public static List<string> GetFileNames(string assemblyName, string filePath)
+        {
+            var settingManifestContents = DoEmbedded.ToStringList(assemblyName, filePath);
+            var filterList = DoList.Filter(settingManifestContents, true, true, '#');
+
+            return DoList.RemoveNulls(filterList);
+        }
+
+        /*
+        public static Dictionary<string,string> ToStringDictionary(string assemblyName, string something)
+        {
+            // Convert an embedded file to a string dictionary
+        }
+        */
+
+/*
+public static Dictionary<string,string> ToStringDictionary(string assemblyName, list<string> fileList)
+{
+    // Convert a list of embedded filenames to a dictionary
+}
+*/
+/*
+}
+}
+
+namespace AO
+{
+public class DoManifest
+{
+/*
+/// <summary>Get the setting key/value pairs.</summary>
+/// <param name="assemblyName">The applications assembly name.</param>
+/// <param name="fileList">The list of setting files.</param>
+/// <returns>A list of all key/value pairs from all setting files.</returns>
+public static List<string> GetKeyValuePairs(string assemblyName, List<string> fileList)
+{
+    var fileContents = new List<string>(); // Holds key/value pairs of the current setting file
+    var keyValuePairs = new List<string>(); // Holds the key/value pairs of all setting files
+
+    foreach (var item in fileList)
+    {
+        if (item.StartsWith("Embedded"))
+        {
+            fileContents = DoEmbedded.ToStringList(assemblyName, item);
+        }
+        else
+        {
+            fileContents = DoFile.ToStringList(item);
+        }
+
+        keyValuePairs = DoList.MergeStringLists(keyValuePairs, fileContents);
+    }
+
+    return DoList.Filter(keyValuePairs, true, true, '#');
+}
+
+public static Dictionary<string, string> GetContents(string filePath)
+{
+    var fileContents = string.Empty; // Holds key/value pairs of the current setting file
+    var fileContents2 = string.Empty;
+    var keyValuePairs = new List<string>(); // Holds the key/value pairs of all setting files
+
+    foreach (var fileName in DoList.Remove(DoFile.ToList(filePath)))
+    {
+        //fileContents2 = DoList.Remove(DoFile.ToList(filePath));
+
+        foreach (var fileLine in DoList.Remove(DoFile.ToList(fileName)))
+        {
+            fileContents = DoFile.ToList(filePath);
+        }
+
+        var tstst = DoString.SplitToList("test,teste");
+
+        //keyValuePairs = DoList.Merge((DoString.SplitToList("keyValuePairs,fileContents");
+        keyValuePairs = DoList.Merge(tstst);
+    }
+
+    /*
+    foreach (var item in )
+    {
+        if (item.StartsWith("Embedded"))
+        {
+            fileContents = DoFile.ToList(filePath);
+        }
+        else
+        {
+            fileContents = DoFile.ToStringList(item);
+        }
+
+        keyValuePairs = DoList.MergeStringLists(keyValuePairs, fileContents);
+    }
+
+    return DoList.Remove(keyValuePairs);
+}
+*/
+//DoList.Remove(DoFile.ToList(filePath))
+
+/*
+var fileNameList = DoFile.ToList(assemblyName + filePath);
+var listOfSettingFilenames = GetFileNames(assemblyName + filePath);
+var listOfKeyValuePairs = GetKeyValuePairs(assemblyName, listOfSettingFilenames);
+var arrayOfKeyValuePairs = DoList.ToStringArray(listOfKeyValuePairs);
+return DoArray.ToDictionary(arrayOfKeyValuePairs, '=');
+*/
+/*
+
+/// <summary>Get the setting filenames.</summary>
+/// <param name="assemblyName">The application assembly name.</param>
+/// <returns>The list of setting filenames.</returns>
+public static List<string> ReadManifest(string filePath)
+{
+    return DoList.Remove(DoFile.ToList(filePath));
+}
+
+*/
+
+
+============================================
+WEB STUFF
+============================================
+
+using System.Net;
+
+namespace AO
+{
+    public class DoWeb
+    {
+        public static string SourceToString(string sourceURL)
+        {
+            string webpageSourceAsString = new WebClient().DownloadString(sourceURL);
+            return webpageSourceAsString;
+        }
+    }
+}

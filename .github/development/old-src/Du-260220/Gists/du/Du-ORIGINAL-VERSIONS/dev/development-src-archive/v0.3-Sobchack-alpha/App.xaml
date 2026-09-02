@@ -1,0 +1,15 @@
+﻿<!--
+    PROJECT: Du (https://github.com/aprettycoolprogram/Du)
+    FILE: App.xaml
+    UPDATED: 1-27-2021-8:34 AM
+    LICENSE: Apache v2 (https://apache.org/licenses/LICENSE-2.0)
+    Copyright 2020 A Pretty Cool Program All rights reserved
+-->
+
+<Application x:Class="Du.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Du"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources />
+</Application>

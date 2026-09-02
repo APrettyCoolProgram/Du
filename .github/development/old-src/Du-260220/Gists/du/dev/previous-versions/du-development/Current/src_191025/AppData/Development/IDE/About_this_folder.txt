@@ -1,0 +1,15 @@
+﻿About the /AppData/Development/IDE/ folder
+==========================================
+This folder should contain any information that your IDEs need.
+
+Examples:
+
+	MyProjectWorkspace.code-workspace
+	VisualStudio.vssettings
+	Resharper.DotSettings
+
+By default, this folder is *not* copied to your project's output directory, and
+is intended to store notes and temporary information useful for the project's
+development.
+
+To use these files, copy/paste their contents into a blank file.
