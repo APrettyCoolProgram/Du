@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/ThirdParty/" />
+  <Folder Name="/ThirdParty/SHFB/">
+    <Project Path="ThirdParty/SHFB-Du/SHFB-Du.shfbproj" Type="7cf6df6d-3b04-46f8-a40b-537d21bca0b4" Id="a4ffcd0f-ce6b-40df-8051-62ace691a977" />
+  </Folder>
+  <Project Path="Du.csproj" />
+</Solution>

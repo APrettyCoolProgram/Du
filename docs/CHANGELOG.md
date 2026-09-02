@@ -6,9 +6,12 @@
 
 </div>
 
-## RYY.MM (YYYY-MM-DD)
+## v1.0 - (YYYY-MM-DD)
 
-> Please see the [release notes](release-notes/RXX.md) for more details.
+> Please see the [release notes](release-notes/v1.0.md) for more details.
+
+`NEW` DuJson.ExportJson.cs - Handles exporting data as JSON.  
+`NEW` DuJson.ImportJson.cs - Handles importing JSON data.
 
 ***
 

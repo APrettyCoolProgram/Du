@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Du</name>
+  </assembly>
+  <members>
+    <member name="T:Du.DuJson.ExportJson">
+      <summary>Provides functionality to export JSON objects to files.</summary>
+    </member>
+    <member name="M:Du.DuJson.ExportJson.ToLocalFile``1(``0,System.String,System.Boolean)">
+      <summary>Exports a JSON object to a file.</summary>
+      <typeparam name="JsonObject">The type of the JSON object.</typeparam>
+      <param name="jsonObject">The JSON object to export.</param>
+      <param name="filePath">The file path to export the JSON object to.</param>
+      <param name="prettyJson">Determines if the JSON data is formatted.</param>
+      <example>
+        <code>
+            var myObject = new MyObject();
+            Du.DuJson.ExportJson.ToLocalFile&lt;MyObject&gt;(myObject, @"C:\Path\to\file.json");        // formatted
+            Du.DuJson.ExportJson.ToLocalFile&lt;MyObject&gt;(myObject, @"C:\Path\to\file.json", false); // not formatted
+            </code>
+      </example>
+    </member>
+    <member name="M:Du.DuJson.ImportJson.FromLocalFile``1(System.String)">
+      <summary>Imports a JSON object from a file.</summary>
+      <typeparam name="JsonObject">The type of the JSON object.</typeparam>
+      <param name="filePath">The file path to import the JSON object from.</param>
+      <returns>The imported JSON object.</returns>
+      <example>
+        <code>
+            var myObject = DuJson.ImportJson.FromLocalFile&lt;MyObject&gt;(@"C:\Path\to\file.json");
+            </code>
+      </example>
+    </member>
+    <member name="N:Du">
+      <summary />
+    </member>
+    <member name="N:Du.DuJson">
+      <summary />
+    </member>
+  </members>
+</doc>

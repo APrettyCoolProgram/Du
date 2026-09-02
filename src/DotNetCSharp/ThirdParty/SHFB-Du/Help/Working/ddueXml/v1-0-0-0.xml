@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="v1-0-0-0" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+<introduction><para>Changes made in this release:</para>
+<ul>
+<li><strong>TODO:</strong> Add change items here</li>
+</ul>
+</introduction>
+<section id="see-also">
+<title level="2">See Also</title>
+<content>
+<para><strong>Other Resources</strong><br />
+<conceptualLink target="VersionHistory" /></para>
+</content>
+</section>
+</developerConceptualDocument>
+</topic>
+
