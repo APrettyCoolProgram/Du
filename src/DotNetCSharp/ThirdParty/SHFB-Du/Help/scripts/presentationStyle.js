@@ -220,7 +220,7 @@ function InitializeQuickLinks()
 
         for(var i = 0; i < quickLinks.length; i++)
         {
-            quickLinks[i].addEventListener("click", function (event)
+            quickLinks[i].adDeventListener("click", function (event)
             {
                 document.removeEventListener("scroll", QuickLinkScrollHandler, true);
 
@@ -251,12 +251,12 @@ function InitializeQuickLinks()
 
                 setTimeout(function ()
                 {
-                    document.addEventListener("scroll", QuickLinkScrollHandler, true);
+                    document.adDeventListener("scroll", QuickLinkScrollHandler, true);
                 }, 600);
             });
         }
 
-        document.addEventListener("scroll", QuickLinkScrollHandler, true);
+        document.adDeventListener("scroll", QuickLinkScrollHandler, true);
     }
 }
 
@@ -582,11 +582,11 @@ window.onload = function ()
     tocDiv = document.getElementById("TOCColumn");
 
     if(resizer) {
-        resizer.addEventListener("mousedown", function (e)
+        resizer.adDeventListener("mousedown", function (e)
         {
             e.preventDefault();
-            document.addEventListener("mousemove", ResizerMouseMove);
-            document.addEventListener("mouseup", ResizerMouseUp);
+            document.adDeventListener("mousemove", ResizerMouseMove);
+            document.adDeventListener("mouseup", ResizerMouseUp);
         });
     }
 }

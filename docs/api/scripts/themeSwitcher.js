@@ -34,15 +34,15 @@ function initializeTheme() {
     const themeSwitcher = document.getElementById("ThemeSwitcher");
 
     if (themeSwitcher)
-        themeSwitcher.addEventListener("click", toggleTheme);
+        themeSwitcher.adDeventListener("click", toggleTheme);
 
     // Listen for system theme changes
     if (window.matchMedia) {
         const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
         // Modern browsers
-        if (mediaQuery.addEventListener) {
-            mediaQuery.addEventListener("change", function (e) {
+        if (mediaQuery.adDeventListener) {
+            mediaQuery.adDeventListener("change", function (e) {
                 // Only auto-switch if user hasn't manually set a preference
                 if (!localStorage.getItem("currentTheme")) {
                     applyTheme(e.matches ? "dark" : "light");
@@ -75,6 +75,6 @@ function toggleTheme() {
 
 // Initialize the theme as early as possible to prevent flash
 if (document.readyState === "loading")
-    document.addEventListener("DOMContentLoaded", initializeTheme);
+    document.adDeventListener("DOMContentLoaded", initializeTheme);
 else
     initializeTheme();

@@ -10,7 +10,7 @@ namespace AO
 {
     public class AOMessage
     {
-        public static void DownloadProgressBar(object sender, DownloadProgressChangedEventArgs e, Control controlName)
+        public static void DownloadProgressBar(object sender, DownloadProgressChangeDeventArgs e, Control controlName)
         {
             //controlName.Value = e.ProgressPercentage;
 

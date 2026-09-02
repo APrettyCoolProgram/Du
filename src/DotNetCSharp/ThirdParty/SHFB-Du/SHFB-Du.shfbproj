@@ -99,10 +99,10 @@ Please see the &amp;lt%3ba href=&amp;quot%3bhttps://github.com/aprettycoolprogra
   <!-- The pre-build and post-build event properties must appear *after* the targets file import in order to be
 			 evaluated correctly. -->
   <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
-    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <PreBuilDevent>
+    </PreBuilDevent>
+    <PostBuilDevent>
+    </PostBuilDevent>
+    <RunPostBuilDevent>OnBuildSuccess</RunPostBuilDevent>
   </PropertyGroup>
 </Project>

@@ -168,8 +168,8 @@ namespace Du
 
         /* Event handlers
          */
-        private void BtnAction01_Click(object sender, RoutedEventArgs e) => ActionButtonClicked(sender);
-        private void BtnAction02_Click(object sender, RoutedEventArgs e) => ActionButtonClicked(sender);
-        private void BtnAction03_Click(object sender, RoutedEventArgs e) => ActionButtonClicked(sender);
+        private void BtnAction01_Click(object sender, RouteDeventArgs e) => ActionButtonClicked(sender);
+        private void BtnAction02_Click(object sender, RouteDeventArgs e) => ActionButtonClicked(sender);
+        private void BtnAction03_Click(object sender, RouteDeventArgs e) => ActionButtonClicked(sender);
     }
 }

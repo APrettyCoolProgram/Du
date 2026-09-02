@@ -35,11 +35,11 @@ namespace Du
         }
 
         // EVENT HANDLERS
-        private void btnBoxButton1_Click(object sender, RoutedEventArgs e) => ButtonFunctions(sender);
+        private void btnBoxButton1_Click(object sender, RouteDeventArgs e) => ButtonFunctions(sender);
 
-        private void btnBoxButton2_Click(object sender, RoutedEventArgs e) => ButtonFunctions(sender);
+        private void btnBoxButton2_Click(object sender, RouteDeventArgs e) => ButtonFunctions(sender);
 
-        private void btnBoxButton3_Click(object sender, RoutedEventArgs e) => ButtonFunctions(sender);
+        private void btnBoxButton3_Click(object sender, RouteDeventArgs e) => ButtonFunctions(sender);
 
 
         // DEFAULT CONSTRUCTOR

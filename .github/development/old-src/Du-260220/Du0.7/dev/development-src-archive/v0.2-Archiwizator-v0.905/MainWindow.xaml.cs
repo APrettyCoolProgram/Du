@@ -18,7 +18,7 @@ namespace Du
             InitializeComponent();
         }
 
-        private void btnTestPing_Click(object sender, RoutedEventArgs e)
+        private void btnTestPing_Click(object sender, RouteDeventArgs e)
         {
             System.Tuple<int, int> result = DuOperatingSystem.MSWindows.PingIpAddress("google.com", 10);
 

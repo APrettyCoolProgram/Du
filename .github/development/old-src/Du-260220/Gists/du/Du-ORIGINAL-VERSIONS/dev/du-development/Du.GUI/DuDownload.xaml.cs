@@ -96,13 +96,13 @@ namespace Thaumaturge.Du
         }
 
         /// <summary>Update the download progress bar.</summary>
-        private void DownloadProgressChanged(object sender, ProgressChangedEventArgs e)
+        private void DownloadProgressChanged(object sender, ProgressChangeDeventArgs e)
         {
             DownloadProgress.Value = e.ProgressPercentage;
         }
 
         /// <summary>What to do when the download is complete.</summary>
-        private void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
+        private void DownloadCompleted(object sender, AsyncCompleteDeventArgs e)
         {
             /*  Eventually we'll handle cancellations and errors, but for now I'm going to comment this section.
              */

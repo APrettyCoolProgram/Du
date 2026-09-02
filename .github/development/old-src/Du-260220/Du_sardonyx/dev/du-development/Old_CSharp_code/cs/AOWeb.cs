@@ -24,7 +24,7 @@ namespace AO
             }
         }
 
-        private static void WebClient_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        private static void WebClient_DownloadProgressChanged(object sender, DownloadProgressChangeDeventArgs e)
         {
             throw new NotImplementedException();
         }
@@ -47,12 +47,12 @@ namespace AO
 //client.DownloadFileAsync(ur, @"C:\path\newImage.jpg");
 
 //And her it is the implementation of the callbacks:
-//void WebClientDownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+//void WebClientDownloadProgressChanged(object sender, DownloadProgressChangeDeventArgs e)
 //{
 //    Console.WriteLine("Download status: {0}%.", e.ProgressPercentage);
 //}
 
-//void WebClientDownloadCompleted(object sender, DownloadDataCompletedEventArgs e)
+//void WebClientDownloadCompleted(object sender, DownloadDataCompleteDeventArgs e)
 //{
 //    Console.WriteLine("Download finished!");
 //}

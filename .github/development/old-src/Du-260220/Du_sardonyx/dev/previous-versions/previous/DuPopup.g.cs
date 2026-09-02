@@ -176,7 +176,7 @@ namespace Du {
             this.btnAction01 = ((System.Windows.Controls.Button)(target));
             
             #line 84 "..\..\..\DuPopup.xaml"
-            this.btnAction01.Click += new System.Windows.RoutedEventHandler(this.BtnAction01_Click);
+            this.btnAction01.Click += new System.Windows.RouteDeventHandler(this.BtnAction01_Click);
             
             #line default
             #line hidden
@@ -185,7 +185,7 @@ namespace Du {
             this.btnAction02 = ((System.Windows.Controls.Button)(target));
             
             #line 94 "..\..\..\DuPopup.xaml"
-            this.btnAction02.Click += new System.Windows.RoutedEventHandler(this.BtnAction02_Click);
+            this.btnAction02.Click += new System.Windows.RouteDeventHandler(this.BtnAction02_Click);
             
             #line default
             #line hidden
@@ -194,7 +194,7 @@ namespace Du {
             this.btnAction03 = ((System.Windows.Controls.Button)(target));
             
             #line 104 "..\..\..\DuPopup.xaml"
-            this.btnAction03.Click += new System.Windows.RoutedEventHandler(this.BtnAction03_Click);
+            this.btnAction03.Click += new System.Windows.RouteDeventHandler(this.BtnAction03_Click);
             
             #line default
             #line hidden

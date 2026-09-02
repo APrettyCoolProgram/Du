@@ -16,27 +16,27 @@ public partial class MainWindow : Window
         tboxTestStringEntry.Text = Du.WithString.ForceStringLength(originalString, stringLength);
     }
 
-    private void btnConvertToLowercase_Click(object sender, RoutedEventArgs e)
+    private void btnConvertToLowercase_Click(object sender, RouteDeventArgs e)
     {
         lblStringResult.Content = Du.WithString.ConvertToLowercase(tboxStringEntry.Text);
     }
 
-    private void btnConvertToUppercase_Click(object sender, RoutedEventArgs e)
+    private void btnConvertToUppercase_Click(object sender, RouteDeventArgs e)
     {
         lblStringResult.Content = Du.WithString.ConvertToUppercase(tboxStringEntry.Text);
     }
 
-    private void btnAppendString_Click(object sender, RoutedEventArgs e)
+    private void btnAppendString_Click(object sender, RouteDeventArgs e)
     {
         lblStringResult.Content = Du.WithString.AppendString(tboxStringEntry.Text, tboxTestStringEntry.Text);
     }
 
-    private void btnPrependString_Click(object sender, RoutedEventArgs e)
+    private void btnPrependString_Click(object sender, RouteDeventArgs e)
     {
         lblStringResult.Content = Du.WithString.PrependString(tboxStringEntry.Text, tboxTestStringEntry.Text);
     }
 
-    private void tboxTestStringEntry_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+    private void tboxTestStringEntry_TextChanged(object sender, System.Windows.Controls.TextChangeDeventArgs e)
     {
         TestStringChanged(tboxTestStringEntry.Text, 1);
     }
