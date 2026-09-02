@@ -1,0 +1,17 @@
+exclude:
+  - man/
+  - release-notes/
+  - source-code/
+  - sourcecode/
+  - testing/
+  - CHANGELOG.md
+  - CODEOWNERS
+  - CONTRIBUTORS.md
+  - DEVELOPMENT.md
+  - FAQ.md
+  - KNOWN-ISSUES.md
+  - NOTICES.md
+  - ROADMAP.md
+  - SECURITY.md
+  - SUPPORT.md
+  - TROUBLESHOOTING.md

@@ -5,7 +5,7 @@
 // Licensed under the Apache 2.0 license.
 // =============================================================================
 
-// v1.0-development+b02
+// `
 
 namespace Du;
 
