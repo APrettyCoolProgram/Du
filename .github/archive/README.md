@@ -1,3 +1,3 @@
 # .github/archive
 
-`%RepositoryName%` archived data goes here.
+`Du` archived data goes here.

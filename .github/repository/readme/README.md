@@ -1,3 +1,3 @@
 # .github/repository/readme
 
-Resources for the `%RepositoryName%` README.md go here.
+Resources for the `Du` README.md go here.

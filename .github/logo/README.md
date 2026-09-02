@@ -1,6 +1,6 @@
 # .github/logo
 
-`%RepositoryName%` repository logos go here.
+`Du` repository logos go here.
 
 There should be a 'light' and 'dark' version of the logo.
 

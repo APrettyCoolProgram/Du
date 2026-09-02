@@ -1,3 +1,3 @@
 # .github/agents
 
-`%RepositoryName%` agent files go here.
+`Du` agent files go here.
